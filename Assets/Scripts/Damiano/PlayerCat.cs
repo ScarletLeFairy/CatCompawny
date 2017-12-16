@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerCat : MonoBehaviour {
 
     public Camera cam;
+    public Animator anim;
+    public GameObject node;
 
     [Header("Spring")]
     public float distance = 2;
@@ -14,6 +16,9 @@ public class PlayerCat : MonoBehaviour {
     public float movspeed = 10;
     public float jump = 40;
     public float gravity = 9.81f / 2f;
+
+    Vector3 velocity = Vector3.zero;
+    bool damp_camera = true;
 
     Quaternion yaw = Quaternion.identity;
     Quaternion pitch = Quaternion.identity;
@@ -48,7 +53,7 @@ public class PlayerCat : MonoBehaviour {
 
 
     // Use this for initialization
-    void Start () {
+    void Awake() {
 		
 	}
 	
@@ -63,16 +68,24 @@ public class PlayerCat : MonoBehaviour {
         {
             Attack();
         }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        {
+            node.SetActive(true);
+        }
+        else
+        {
+            node.SetActive(false);
+        }
     }
 
 
     void Attack()
     {
-        
+        anim.SetTrigger("Attack");
     }
 
-    Vector3 velocity = Vector3.zero;
-    bool damp_camera = true;
+    
 
     void MoveCharacter()
     {
@@ -85,6 +98,7 @@ public class PlayerCat : MonoBehaviour {
             Quaternion q = Quaternion.LookRotation(yaw * movedir);
             
             transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 8f * movedir.magnitude);
+            damp_camera = true;
             //pitch = Quaternion.Lerp(pitch, transform.rotation, Time.deltaTime * 2f * movedir.magnitude);
 
             Debug.DrawLine(transform.position, transform.position + q * Vector3.forward, Color.red);
@@ -128,7 +142,7 @@ public class PlayerCat : MonoBehaviour {
         float vertical = Input.GetAxis("View Vertical") * mouse_sensitivity;
         float horizontal = Input.GetAxis("View Horizontal") * mouse_sensitivity;
 
-        damp_camera = Mathf.Abs(horizontal) > 0 ? false : true;
+        damp_camera = Mathf.Abs(horizontal) > 0 ? false : damp_camera;
 
         yaw = Quaternion.AngleAxis(horizontal, Vector3.up) * yaw; //HORIZONTAL
         pitch = Quaternion.AngleAxis(vertical, -Vector3.right) * pitch; //VERTICAL
