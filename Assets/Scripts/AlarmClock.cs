@@ -16,11 +16,17 @@ public class AlarmClock : MonoBehaviour {
     private float seconds;
 
     private Camera cam;
+    private GameManager gameManager;
 
     public Vector3 TimerPosOffset;
 
     public int[] snoozeTime = { 25, 20, 15, 10, 5 };
     private int snoozeIndex = 0;
+
+    private void Awake()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 
 
     // Use this for initialization
@@ -74,6 +80,8 @@ public class AlarmClock : MonoBehaviour {
                 minutes = 0;
                 seconds = 0;
             }
+        } else {
+            gameManager.EndGame();
         }
     }
 
