@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: f170dc79ecce81f429d680663bdada1a
+timeCreated: 1513445445
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: catMesh
+    100004: HorseHub002
+    100006: HorseHub003
+    100008: HorseHub004
+    100010: HorseLLeg1
+    100012: HorseLLeg1 1
+    100014: HorseLLeg2
+    100016: HorseLLeg2 1
+    100018: HorseLLegAnkle
+    100020: HorseLLegAnkle 1
+    100022: HorseRLeg1
+    100024: HorseRLeg1 1
+    100026: HorseRLeg2
+    100028: HorseRLeg2 1
+    100030: HorseRLegAnkle
+    100032: HorseRLegAnkle 1
+    100034: HorseSpine1
+    100036: HorseSpine1 1
+    100038: HorseSpine2
+    100040: HorseSpine2 1
+    100042: HorseSpine3
+    100044: HorseTail1
+    100046: HorseTail2
+    100048: HorseTail3
+    100050: HorseTail4
+    400000: //RootNode
+    400002: catMesh
+    400004: HorseHub002
+    400006: HorseHub003
+    400008: HorseHub004
+    400010: HorseLLeg1
+    400012: HorseLLeg1 1
+    400014: HorseLLeg2
+    400016: HorseLLeg2 1
+    400018: HorseLLegAnkle
+    400020: HorseLLegAnkle 1
+    400022: HorseRLeg1
+    400024: HorseRLeg1 1
+    400026: HorseRLeg2
+    400028: HorseRLeg2 1
+    400030: HorseRLegAnkle
+    400032: HorseRLegAnkle 1
+    400034: HorseSpine1
+    400036: HorseSpine1 1
+    400038: HorseSpine2
+    400040: HorseSpine2 1
+    400042: HorseSpine3
+    400044: HorseTail1
+    400046: HorseTail2
+    400048: HorseTail3
+    400050: HorseTail4
+    4300000: catMesh
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: catMesh
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert_catEyes
+    second: {fileID: 2100000, guid: 23107d1fec1b63741b7faac676213af3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert_catFur
+    second: {fileID: 2100000, guid: c94cbc61eae7b124fa14971df9d5f41d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert_catNose
+    second: {fileID: 2100000, guid: 66ccec9b7589a0d40b6fa73d78c64a30, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 24
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AttackMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: catMesh
+    m_Weight: 1
+  - m_Path: HorseHub002
+    m_Weight: 1
+  - m_Path: HorseHub002/HorseLLeg1
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseLLeg1/HorseLLeg2
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseLLeg1/HorseLLeg2/HorseLLegAnkle
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseRLeg1
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseRLeg1/HorseRLeg2
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseRLeg1/HorseRLeg2/HorseRLegAnkle
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseSpine1
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2
+    m_Weight: 1
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3
+    m_Weight: 1
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003/HorseLLeg1
+      1
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003/HorseLLeg1
+      1/HorseLLeg2 1
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003/HorseLLeg1
+      1/HorseLLeg2 1/HorseLLegAnkle 1
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003/HorseRLeg1
+      1
+    m_Weight: 1
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003/HorseRLeg1
+      1/HorseRLeg2 1
+    m_Weight: 1
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003/HorseRLeg1
+      1/HorseRLeg2 1/HorseRLegAnkle 1
+    m_Weight: 1
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003/HorseSpine1
+      1
+    m_Weight: 1
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003/HorseSpine1
+      1/HorseSpine2 1
+    m_Weight: 1
+  - m_Path: HorseHub002/HorseSpine1/HorseSpine2/HorseSpine3/HorseHub003/HorseSpine1
+      1/HorseSpine2 1/HorseHub004
+    m_Weight: 1
+  - m_Path: HorseHub002/HorseTail1
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseTail1/HorseTail2
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseTail1/HorseTail2/HorseTail3
+    m_Weight: 0
+  - m_Path: HorseHub002/HorseTail1/HorseTail2/HorseTail3/HorseTail4
+    m_Weight: 0
