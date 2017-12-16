@@ -53,7 +53,7 @@ public class AlarmClock : MonoBehaviour {
         timeLeft = startTime;
         snoozeIndex = 0;
         Update();
-        StartCoroutine(updateAlarmClock());
+        StartCoroutine(UpdateAlarmClock());
         Debug.Log("Timer is started");
     }
 	
@@ -61,11 +61,14 @@ public class AlarmClock : MonoBehaviour {
 	void Update () {
         screenPos = cam.WorldToScreenPoint(timerPos);
         timerText.transform.position = timerPos;
+        timerText.transform.LookAt(cam.transform, transform.up);
+        timerText.transform.localEulerAngles = new Vector3(0, 180, 0);
 
-        if (Input.GetKeyDown(KeyCode.JoystickButton2))
-        {
-            Snooze();
-        }
+        // just for testing
+        //if (Input.GetKeyDown(KeyCode.JoystickButton2))
+        //{
+        //    Snooze();
+        //}
 
 
         if (!stop)
@@ -88,7 +91,7 @@ public class AlarmClock : MonoBehaviour {
         }
     }
 
-    private IEnumerator updateAlarmClock()
+    private IEnumerator UpdateAlarmClock()
     {
         while (!stop)
         {
