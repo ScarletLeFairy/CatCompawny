@@ -107,4 +107,11 @@ public class AlarmClock : MonoBehaviour {
         } 
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent(typeof(PlayerCat))) {
+            Snooze();
+        }
+    }
+
 }

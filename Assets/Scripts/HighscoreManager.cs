@@ -129,6 +129,7 @@ public class HighscoreManager : MonoBehaviour {
         string name = inputField.text;
         inputField.DeactivateInputField();
         inputField.enabled = false;
+        
         if (!string.IsNullOrEmpty(name))
         {
             //Debug.Log("Is null:" + string.IsNullOrEmpty(name));
