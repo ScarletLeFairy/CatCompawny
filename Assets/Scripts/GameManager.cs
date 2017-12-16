@@ -38,6 +38,8 @@ public class GameManager : MonoBehaviour {
 
         pointsText.enabled = true;
         pointsCount.enabled = true;
+
+        gameRunning = true;
     }
 
     public void EndGame()
@@ -49,6 +51,8 @@ public class GameManager : MonoBehaviour {
 
         pointsText.enabled = false;
         pointsCount.enabled = false;
+
+        gameRunning = false;
     }
 
     // Use this for initialization
