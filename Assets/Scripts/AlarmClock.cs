@@ -5,13 +5,6 @@ using UnityEngine.UI;
 
 public class AlarmClock : MonoBehaviour {
 
-    private static int timer = 0;
-    public static int Timer
-    {
-        get { return timer; }
-        set { timer = value; }
-    }
-
     private Vector3 timerPos;
     public Text timerText;
 
@@ -28,10 +21,6 @@ public class AlarmClock : MonoBehaviour {
 
     public int[] snoozeTime = { 25, 20, 15, 10, 5 };
     private int snoozeIndex = 0;
-
-    /*
-     * TODO: Lauter ticken die letzten 5 Sekunden --> nur dann ist Snooze möglich?
-     */
 
 
     // Use this for initialization
