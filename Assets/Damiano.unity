@@ -18822,11 +18822,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1257160614}
   m_Mesh: {fileID: 4300106, guid: 2f7dc3caa9b635148950cfd3d2a81d86, type: 3}
---- !u!4 &1258645231 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4657995638480832, guid: 0c18932074f2b6e469531c40647aeb96,
-    type: 2}
-  m_PrefabInternal: {fileID: 1822843959}
 --- !u!1 &1271654898
 GameObject:
   m_ObjectHideFlags: 0
@@ -18924,11 +18919,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!95 &1291015240 stripped
-Animator:
-  m_PrefabParentObject: {fileID: 95305256796296988, guid: 0c18932074f2b6e469531c40647aeb96,
-    type: 2}
-  m_PrefabInternal: {fileID: 1822843959}
 --- !u!1 &1305114240
 GameObject:
   m_ObjectHideFlags: 0
@@ -26792,21 +26782,6 @@ Prefab:
       propertyPath: cam
       value: 
       objectReference: {fileID: 595261630}
-    - target: {fileID: 143911841918547270, guid: 0c18932074f2b6e469531c40647aeb96,
-        type: 2}
-      propertyPath: m_SlopeLimit
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114132887301281742, guid: 0c18932074f2b6e469531c40647aeb96,
-        type: 2}
-      propertyPath: anim
-      value: 
-      objectReference: {fileID: 1291015240}
-    - target: {fileID: 114132887301281742, guid: 0c18932074f2b6e469531c40647aeb96,
-        type: 2}
-      propertyPath: node
-      value: 
-      objectReference: {fileID: 1867284894}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c18932074f2b6e469531c40647aeb96, type: 2}
   m_IsPrefabParent: 0
@@ -27318,60 +27293,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 171.22, y: 25.059986, z: 34.50912}
   m_Center: {x: 0.3000021, y: 102.9, z: 32.745457}
---- !u!1 &1867284894
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1867284896}
-  - component: {fileID: 1867284895}
-  - component: {fileID: 1867284897}
-  m_Layer: 0
-  m_Name: Claw
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!136 &1867284895
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1867284894}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.01
-  m_Height: 0.1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &1867284896
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1867284894}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.052, y: 0.006, z: -0.001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1258645231}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &1867284897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1867284894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f35fab823daa04296033ef47a0c010, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1874936994
 GameObject:
   m_ObjectHideFlags: 0
