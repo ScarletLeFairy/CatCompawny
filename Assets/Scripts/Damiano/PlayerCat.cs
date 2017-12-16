@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[SelectionBase]
 public class PlayerCat : MonoBehaviour {
 
     public Camera cam;
@@ -70,10 +71,10 @@ public class PlayerCat : MonoBehaviour {
         
     }
 
-    Vector3 movedir = Vector3.zero;
+    Vector3 velocity = Vector3.zero;
     void MoveCharacter()
     {
-        movedir = new Vector3(Input.GetAxis("Move Horizontal"), 0, Input.GetAxis("Move Vertical"));
+        Vector3 movedir = new Vector3(Input.GetAxis("Move Horizontal"), 0, Input.GetAxis("Move Vertical"));
         
 
         //ROTATE MESH
@@ -87,29 +88,26 @@ public class PlayerCat : MonoBehaviour {
             
         }
 
+        //GRAVITY
+        velocity.y = body.isGrounded ? -0.1f : velocity.y - gravity * Time.deltaTime;
+
         if (body.isGrounded)
         {
+            velocity.x = movedir.x;
+            velocity.z = movedir.z;
 
-            
-            movedir *= movspeed * Time.deltaTime;
-            movedir.y = -gravity * Time.deltaTime;
+            velocity *= movspeed * Time.deltaTime;
 
 
             if (Input.GetKeyDown(KeyCode.JoystickButton0)) {
-                movedir.y = jump * Time.deltaTime;
+                velocity.y = jump * Time.deltaTime;
             }
             
-        }
-        else
-        {
-            //Gravity
-            movedir *= 0 * Time.deltaTime;
-            movedir.y -= gravity * Time.deltaTime;
         }
 
         
 
-        body.Move(yaw * movedir);
+        body.Move(yaw * velocity);
     }
 
     void RotateView()
@@ -133,11 +131,11 @@ public class PlayerCat : MonoBehaviour {
     }
 
 
-    Vector3 velocity;
+    
     void LateUpdate()
     {
         //Vector3 target = transform.position + spring + view * -Vector3.forward * distance;
-        //cam.transform.position = Vector3.SmoothDamp(new Vector3(target.x, cam.transform.position.y, target.z), target, ref velocity, 0.2f);
+        //cam.transform.position = Vector3.SmoothDamp(new Vector3(target.x, cam.transform.position.y, target.z), target, ref velo, 0.2f);
 
 
         cam.transform.position = transform.position + spring + view * -Vector3.forward * distance;
