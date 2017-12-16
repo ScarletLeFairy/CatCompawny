@@ -5,9 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource)), SelectionBase]
 public class Present : Destructible {
 
-    public int health = 100;
-    public int points = 5;
-
     public AudioClip clip;
     AudioSource audioSource;
 

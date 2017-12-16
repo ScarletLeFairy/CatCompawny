@@ -72,6 +72,8 @@ public class PlayerCat : MonoBehaviour {
     }
 
     Vector3 velocity = Vector3.zero;
+    bool damp_camera = true;
+
     void MoveCharacter()
     {
         Vector3 movedir = new Vector3(Input.GetAxis("Move Horizontal"), 0, Input.GetAxis("Move Vertical"));
@@ -82,11 +84,22 @@ public class PlayerCat : MonoBehaviour {
         {
             Quaternion q = Quaternion.LookRotation(yaw * movedir);
             
-            transform.rotation = Quaternion.Lerp(transform.rotation, q, Time.deltaTime * 3f * movedir.magnitude);
+            transform.rotation = Quaternion.Slerp(transform.rotation, q, Time.deltaTime * 8f * movedir.magnitude);
+            //pitch = Quaternion.Lerp(pitch, transform.rotation, Time.deltaTime * 2f * movedir.magnitude);
 
             Debug.DrawLine(transform.position, transform.position + q * Vector3.forward, Color.red);
             
         }
+
+        //DAMP CAMERA
+        if (damp_camera) {
+            Quaternion damp  = Quaternion.Slerp(yaw, transform.rotation, Time.deltaTime * (1 + movedir.magnitude));
+            damp = Quaternion.RotateTowards(yaw, damp, 1);
+            yaw = damp;
+        }
+
+        Debug.DrawLine(transform.position, transform.position + yaw * Vector3.forward, Color.green);
+        Debug.DrawLine(transform.position, transform.position + transform.rotation * Vector3.forward, Color.blue);
 
         //GRAVITY
         velocity.y = body.isGrounded ? -0.1f : velocity.y - gravity * Time.deltaTime;
@@ -114,6 +127,8 @@ public class PlayerCat : MonoBehaviour {
     {
         float vertical = Input.GetAxis("View Vertical") * mouse_sensitivity;
         float horizontal = Input.GetAxis("View Horizontal") * mouse_sensitivity;
+
+        damp_camera = Mathf.Abs(horizontal) > 0 ? false : true;
 
         yaw = Quaternion.AngleAxis(horizontal, Vector3.up) * yaw; //HORIZONTAL
         pitch = Quaternion.AngleAxis(vertical, -Vector3.right) * pitch; //VERTICAL

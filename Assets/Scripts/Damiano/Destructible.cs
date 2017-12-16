@@ -6,8 +6,11 @@ public class Destructible : MonoBehaviour {
 
     public GameObject UI_Damage;
 
-	// Use this for initialization
-	void Start () {
+    public int health = 100;
+    public int points = 5;
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
