@@ -26,6 +26,10 @@ public class UI_Damage : MonoBehaviour {
         ui_dmg.text = "" + damage;
         bg_dmg.text = "" + damage;
 
+
+        transform.LookAt(Camera.main.transform, transform.up);
+        transform.Rotate(new Vector3(0, 180, 0));
+
         float past = Time.time - time;
 
         float alpha = curve.Evaluate(past);

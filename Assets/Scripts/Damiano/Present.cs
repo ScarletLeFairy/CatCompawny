@@ -16,7 +16,7 @@ public class Present : Destructible {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        //SufferDamage(1234);
 	}
 
     void OnCollisionEnter(Collision collision)
