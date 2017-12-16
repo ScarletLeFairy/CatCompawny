@@ -12,24 +12,21 @@ public class AlarmClock : MonoBehaviour {
         set { timer = value; }
     }
 
-    Vector2 screenPos;
-    Vector3 timerPos;
-
+    private Vector3 timerPos;
     public Text timerText;
 
-    private int startTime = 20;
+    public int startTime = 20;
+    private bool stop = true;
 
-    public float timeLeft = 0;
-    public bool stop = true;
-
+    private float timeLeft = 0;
     private float minutes;
     private float seconds;
 
-    Camera cam;
+    private Camera cam;
 
     public Vector3 TimerPosOffset;
 
-    private int[] snoozeTime = { 25, 20, 15, 10, 5 };
+    public int[] snoozeTime = { 25, 20, 15, 10, 5 };
     private int snoozeIndex = 0;
 
     /*
@@ -42,11 +39,12 @@ public class AlarmClock : MonoBehaviour {
         timerPos = gameObject.transform.position;
         timerPos += TimerPosOffset;
         cam = Camera.main;
-        //timerText.transform.SetPositionAndRotation(position, timerText.transform.rotation);
+        
+        // start timer with game
         StartTimer();
     }
 
-    void StartTimer()
+    public void StartTimer()
     {
         // TODO: do this on pressing start later
         stop = false;
@@ -59,11 +57,9 @@ public class AlarmClock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        screenPos = cam.WorldToScreenPoint(timerPos);
         timerText.transform.position = timerPos;
         timerText.transform.LookAt(cam.transform, transform.up);
         timerText.transform.Rotate(new Vector3(0, 180, 0));
-        //timerText.transform.localEulerAngles = new Vector3(0, 180, 0);
 
         // just for testing
         //if (Input.GetKeyDown(KeyCode.JoystickButton2))
