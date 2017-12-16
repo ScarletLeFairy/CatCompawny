@@ -62,7 +62,8 @@ public class AlarmClock : MonoBehaviour {
         screenPos = cam.WorldToScreenPoint(timerPos);
         timerText.transform.position = timerPos;
         timerText.transform.LookAt(cam.transform, transform.up);
-        timerText.transform.localEulerAngles = new Vector3(0, 180, 0);
+        timerText.transform.Rotate(new Vector3(0, 180, 0));
+        //timerText.transform.localEulerAngles = new Vector3(0, 180, 0);
 
         // just for testing
         //if (Input.GetKeyDown(KeyCode.JoystickButton2))
