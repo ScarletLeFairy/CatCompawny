@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour {
         // TODO get alarm clock and timer or use event
     }
 
+
     public void StartGame()
     {
         points = 0;
@@ -59,6 +60,9 @@ public class GameManager : MonoBehaviour {
         alarmClock.StartTimer();
     }
 
+    bool endGAME = false;
+    float time = 0;
+
     public void EndGame()
     {
         gameTitle.enabled = true;
@@ -71,7 +75,12 @@ public class GameManager : MonoBehaviour {
 
         gameIsRunning = false;
 
-        highscoreManager.CheckToSaveScore(points); // TODO get score
+        highscoreManager.CheckToSaveScore(points);
+
+        endGAME = true;
+        time = Time.time;
+
+        // TODO get score
     }
 
     //// Use this for initialization
@@ -82,9 +91,15 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        if (endGAME && time + 5 < Time.time)
+        {
+            Application.LoadLevel("BlackScreen");
+        }
+
         if (!gameIsRunning)
         {
-            if (Input.GetKeyDown(KeyCode.JoystickButton2))
+            if (Input.GetKeyDown(KeyCode.JoystickButton2) && !endGAME)
             {
                 Debug.Log("Start the game");
                 StartGame();

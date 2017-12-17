@@ -24,10 +24,14 @@ public class AlarmClock : MonoBehaviour {
 
     private Transform parentTransform;
 
+    AudioSource audioSource;
+
     private void Awake()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         parentTransform = timerText.gameObject.GetComponentInParent<Transform>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
 
@@ -81,6 +85,7 @@ public class AlarmClock : MonoBehaviour {
                 seconds = 0;
             }
         } else if (stop && gameManager.GameIsRunning) {
+            audioSource.Play();
             gameManager.EndGame();
         }
     }
@@ -100,7 +105,7 @@ public class AlarmClock : MonoBehaviour {
      **/
     public void Snooze()
     {
-        if (snoozeIndex < snoozeTime.Length && timeLeft < snoozeTime[snoozeIndex + 1])
+        if (snoozeIndex < snoozeTime.Length && timeLeft < snoozeTime[(snoozeIndex + 1) % snoozeTime.Length ])
         {
             Debug.Log("Snooze " + (snoozeIndex + 1));
             timeLeft = snoozeTime[snoozeIndex++];

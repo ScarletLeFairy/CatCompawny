@@ -12,6 +12,7 @@ public class Destructible : MonoBehaviour {
     public float stability = 2f;
 
     public bool destructable = false;
+    public GameObject death = null;
 
     public GameObject UI_Damage;
 
@@ -27,6 +28,10 @@ public class Destructible : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         if (destructable && health <= 0){
+            if(death != null)
+            {
+                Instantiate(death, transform.position, Quaternion.identity);
+            }
             Destroy(gameObject);
         }
 	}

@@ -123,7 +123,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b1beca8112de0c04185ab9d8adae73e3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2c71967741767f54a8d702685b7ee2c8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -210,4 +210,5 @@ MonoBehaviour:
   claw_damage: 10
   stability: 6
   destructable: 1
+  death: {fileID: 1273364230273160, guid: 3a4ed4f8561689f42a241bf9fb4ccde8, type: 2}
   UI_Damage: {fileID: 1124246380481538, guid: 169610dbc1081ea4298caa5df1270f0c, type: 2}

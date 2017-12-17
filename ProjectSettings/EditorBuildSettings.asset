@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/BlackScreen.unity
+    guid: cc592eae37701934ab63eb776be1c4d4
+  - enabled: 1
+    path: Assets/FINAL_LEVEL_BUILD.unity
+    guid: b68a36f0d5193534f907679585fc1373
