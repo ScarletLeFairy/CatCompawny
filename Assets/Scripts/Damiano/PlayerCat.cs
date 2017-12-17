@@ -53,7 +53,6 @@ public class PlayerCat : MonoBehaviour {
     private GameManager gameManager;
 
     // Use this for initialization
-<<<<<<< HEAD
     void Awake() {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
@@ -80,42 +79,13 @@ public class PlayerCat : MonoBehaviour {
             {
                 node.SetActive(false);
             }
-=======
-    AudioSource audioSource;
-
-    void Awake()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update () {
-        
-        RotateView();
-
-        MoveCharacter();
-
-        Attack();
-        
+        }
     }
 
 
     void Attack()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-        {
-            node.SetActive(true);
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.JoystickButton2))
-            {
-                anim.SetTrigger("Attack");
-                audioSource.Play();
-            }
-            node.SetActive(false);
->>>>>>> d1dfe8f98a1a572bb11b605988340a0c216e2fdc
-        }
+        anim.SetTrigger("Attack");
     }
 
     
