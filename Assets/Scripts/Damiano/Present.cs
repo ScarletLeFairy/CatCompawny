@@ -8,6 +8,8 @@ public class Present : Destructible {
     public AudioClip clip;
     AudioSource audioSource;
 
+    public float stability = 2f;
+
     // Use this for initialization
     void Awake() {
         audioSource = GetComponent<AudioSource>();
@@ -25,7 +27,7 @@ public class Present : Destructible {
         {
             Debug.DrawRay(contact.point, contact.normal, Color.white);
         }
-        if (collision.relativeVelocity.magnitude > 2) {
+        if (collision.relativeVelocity.magnitude > stability) {
             SufferDamage(Mathf.RoundToInt(collision.relativeVelocity.magnitude) * points);
             audioSource.Play();
         }

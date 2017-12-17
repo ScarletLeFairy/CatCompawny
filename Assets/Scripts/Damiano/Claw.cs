@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Claw : MonoBehaviour {
 
+    
+
     void OnTriggerEnter(Collider other)
     {
-        //Debug.Log("TRIGGER ENTER " + other.gameObject.name);
-        //other.gameObject
-        //Debug.Log("DESTROY " + other.gameObject.name);
-        //Destroy(other.gameObject);
+        Vector3 closest = other.ClosestPoint(transform.position);
+        Vector3 dir = ((closest - transform.position ).normalized  + Vector3.up * 0.1f).normalized;
+
+        Debug.DrawLine(transform.position, transform.position + dir, Color.magenta, 4);
 
         Rigidbody rigid = FindRigidbody(other.transform);
         if (rigid != null)
         {
-            rigid.AddForce(Vector3.up * 100, ForceMode.Impulse);
+            rigid.AddForce(dir * 50, ForceMode.Impulse);
         }
     }
 
