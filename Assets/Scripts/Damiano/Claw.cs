@@ -18,14 +18,13 @@ public class Claw : MonoBehaviour {
         {
             rigid.AddForce(dir * 5, ForceMode.Impulse);
             rigid.AddForce(Vector3.up * 2, ForceMode.Impulse);
-        }
 
-        Destructible dest = rigid.gameObject.GetComponent<Destructible>();
-        if (dest != null)
-        {
-            dest.SufferDamage();
+            Destructible dest = rigid.gameObject.GetComponent<Destructible>();
+            if (dest != null)
+            {
+                dest.SufferDamage();
+            }
         }
-        
     }
 
     Rigidbody FindRigidbody(Transform trans)

@@ -60,13 +60,17 @@ public class PlayerCat : MonoBehaviour {
     {
         audioSource = GetComponent<AudioSource>();
 
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        GameObject obj = GameObject.Find("GameManager");
+        if(obj != null)
+        {
+            gameManager = obj.GetComponent<GameManager>();
+        }
     }
 
     // Update is called once per frame
     void Update () {
         
-        if (gameManager.GameIsRunning)
+        if (gameManager == null || gameManager.GameIsRunning)
         {
             RotateView();
 
