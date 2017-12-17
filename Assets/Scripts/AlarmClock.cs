@@ -48,7 +48,10 @@ public class AlarmClock : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        timerPos = gameObject.transform.position;
+        timerPos += TimerPosOffset;
         timerText.transform.position = timerPos;
+        
         timerText.transform.LookAt(cam.transform, transform.up);
         timerText.transform.Rotate(new Vector3(0, 180, 0));
 

@@ -195,7 +195,7 @@ public class HighscoreManager : MonoBehaviour {
         string text = "";
         for (int i = 0; i < scores.Count; i++)
         {
-            text = text + (i + 1) + ".  " + scores[i].name + "\t" + scores[i].score + "\n";
+            text = text + (i + 1) + ".  " + scores[i].name + "\t \t" + scores[i].score + "\n";
         }
         highscoreText.text = text;
     }

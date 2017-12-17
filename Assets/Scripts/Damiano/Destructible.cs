@@ -16,9 +16,11 @@ public class Destructible : MonoBehaviour {
     public GameObject UI_Damage;
 
     AudioSource audioSource;
+    private GameManager gameManager;
 
     void Awake()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -54,6 +56,7 @@ public class Destructible : MonoBehaviour {
 
         GameObject dmg = Instantiate(UI_Damage, transform.position, Quaternion.identity);
         dmg.GetComponent<UI_Damage>().damage = points;
+        gameManager.AddPoints(points);
 
         
 

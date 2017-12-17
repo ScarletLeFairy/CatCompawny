@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour {
 
     private HighscoreManager highscoreManager;
 
+    private int points = 0;
+
     private void Awake()
     {
         gameTitle.enabled = true;
@@ -41,6 +43,8 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame()
     {
+        points = 0;
+
         gameTitle.enabled = false;
         highscoreTitle.enabled = false;
         highscoreText.enabled = false;
@@ -67,7 +71,7 @@ public class GameManager : MonoBehaviour {
 
         gameIsRunning = false;
 
-        highscoreManager.CheckToSaveScore(170); // TODO get score
+        highscoreManager.CheckToSaveScore(points); // TODO get score
     }
 
     //// Use this for initialization
@@ -85,8 +89,16 @@ public class GameManager : MonoBehaviour {
                 Debug.Log("Start the game");
                 StartGame();
             }
+        } else
+        {
+            pointsCount.text = points.ToString();
         }
         
+    }
+
+    public void AddPoints(int p)
+    {
+        points += p;
     }
 
     
