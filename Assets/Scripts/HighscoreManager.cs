@@ -127,8 +127,10 @@ public class HighscoreManager : MonoBehaviour {
     {
         //Debug.Log("Input has ended "+ inputField.text);
         string name = inputField.text;
-        inputField.DeactivateInputField();
-        inputField.enabled = false;
+        
+        //inputField.CancelInvoke();
+        //inputField.DeactivateInputField();
+        //inputField.enabled = false;
         
         if (!string.IsNullOrEmpty(name))
         {
