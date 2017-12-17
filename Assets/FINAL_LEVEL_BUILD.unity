@@ -3360,7 +3360,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 487886149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 284, y: 211, z: 0}
+  m_LocalPosition: {x: 100, y: 211, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1478022967}
@@ -12933,6 +12933,11 @@ Prefab:
     - target: {fileID: 1442503780105538, guid: 0c18932074f2b6e469531c40647aeb96, type: 2}
       propertyPath: m_Name
       value: CatPlayer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132887301281742, guid: 0c18932074f2b6e469531c40647aeb96,
+        type: 2}
+      propertyPath: jump_height
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c18932074f2b6e469531c40647aeb96, type: 2}

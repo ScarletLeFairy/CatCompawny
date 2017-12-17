@@ -163,7 +163,7 @@ public class PlayerCat : MonoBehaviour {
 
 
             if (Input.GetKeyDown(KeyCode.JoystickButton0) && jump) {
-                velocity.y = jump_height;// * Time.deltaTime;
+                velocity.y = jump_height * Time.deltaTime;
                 anim.SetTrigger("Jump");
                 jump = false;
             }

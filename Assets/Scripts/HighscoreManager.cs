@@ -138,16 +138,16 @@ public class HighscoreManager : MonoBehaviour {
     {
         //Debug.Log("Input has ended "+ inputField.text);
         string name = inputField.text;
-        
         //inputField.CancelInvoke();
         //inputField.DeactivateInputField();
         //inputField.enabled = false;
-        
+
         if (!string.IsNullOrEmpty(name))
         {
             //Debug.Log("Is null:" + string.IsNullOrEmpty(name));
             SaveToScoreboard(currentScore, name);
             RefreshScoreboard();
+            
         }
     }
 
