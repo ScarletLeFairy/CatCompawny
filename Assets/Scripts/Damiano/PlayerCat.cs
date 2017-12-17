@@ -80,21 +80,25 @@ public class PlayerCat : MonoBehaviour {
         }
     }
 
-
+    bool freeze = false;
     void Attack()
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
             node.SetActive(true);
+            freeze = true;
         }
         else
         {
+            node.SetActive(false);
+            freeze = false;
+
             if (Input.GetKeyDown(KeyCode.JoystickButton2))
             {
                 anim.SetTrigger("Attack");
                 audioSource.Play();
             }
-            node.SetActive(false);
+            
         }
     }
 
@@ -102,8 +106,14 @@ public class PlayerCat : MonoBehaviour {
 
     void MoveCharacter()
     {
+        if (freeze)
+        {
+            anim.SetFloat("Speed", 0);
+            return;
+        }
+
         Vector3 movedir = new Vector3(Input.GetAxis("Move Horizontal"), 0, Input.GetAxis("Move Vertical"));
-        
+        anim.SetFloat("Speed", movedir.magnitude);
 
         //ROTATE MESH
         if (movedir.magnitude > 0)

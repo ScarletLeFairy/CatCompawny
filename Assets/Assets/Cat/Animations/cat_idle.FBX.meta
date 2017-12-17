@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8668023a5a5609f4b81a6e6adff1003f
-timeCreated: 1513459820
+guid: be6685d9b6e04e14bb70a1b60b94f001
+timeCreated: 1513481243
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -57,11 +57,88 @@ ModelImporter:
     400046: HorseTail2
     400048: HorseTail3
     400050: HorseTail4
-    4300000: catMesh
+    2300000: HorseHub002
+    2300002: HorseHub003
+    2300004: HorseHub004
+    2300006: HorseLLeg1
+    2300008: HorseLLeg1 1
+    2300010: HorseLLeg2
+    2300012: HorseLLeg2 1
+    2300014: HorseLLegAnkle
+    2300016: HorseLLegAnkle 1
+    2300018: HorseRLeg1
+    2300020: HorseRLeg1 1
+    2300022: HorseRLeg2
+    2300024: HorseRLeg2 1
+    2300026: HorseRLegAnkle
+    2300028: HorseRLegAnkle 1
+    2300030: HorseSpine1
+    2300032: HorseSpine1 1
+    2300034: HorseSpine2
+    2300036: HorseSpine2 1
+    2300038: HorseSpine3
+    2300040: HorseTail1
+    2300042: HorseTail2
+    2300044: HorseTail3
+    2300046: HorseTail4
+    3300000: HorseHub002
+    3300002: HorseHub003
+    3300004: HorseHub004
+    3300006: HorseLLeg1
+    3300008: HorseLLeg1 1
+    3300010: HorseLLeg2
+    3300012: HorseLLeg2 1
+    3300014: HorseLLegAnkle
+    3300016: HorseLLegAnkle 1
+    3300018: HorseRLeg1
+    3300020: HorseRLeg1 1
+    3300022: HorseRLeg2
+    3300024: HorseRLeg2 1
+    3300026: HorseRLegAnkle
+    3300028: HorseRLegAnkle 1
+    3300030: HorseSpine1
+    3300032: HorseSpine1 1
+    3300034: HorseSpine2
+    3300036: HorseSpine2 1
+    3300038: HorseSpine3
+    3300040: HorseTail1
+    3300042: HorseTail2
+    3300044: HorseTail3
+    3300046: HorseTail4
+    4300000: HorseHub002
+    4300002: HorseLLeg1
+    4300004: HorseLLeg2
+    4300006: HorseLLegAnkle
+    4300008: HorseRLeg1
+    4300010: HorseRLeg2
+    4300012: HorseRLegAnkle
+    4300014: HorseSpine1
+    4300016: HorseSpine2
+    4300018: HorseSpine3
+    4300020: HorseHub003
+    4300022: HorseLLeg1
+    4300024: HorseLLeg2
+    4300026: HorseLLegAnkle
+    4300028: HorseRLeg1
+    4300030: HorseRLeg2
+    4300032: HorseRLegAnkle
+    4300034: HorseSpine1
+    4300036: HorseSpine2
+    4300038: HorseHub004
+    4300040: HorseTail1
+    4300042: HorseTail2
+    4300044: HorseTail3
+    4300046: HorseTail4
+    4300048: catMesh
     7400000: Take 001
     9500000: //RootNode
     13700000: catMesh
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 54f982ebdf166b2499f8f78fb7b4372f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -107,14 +184,14 @@ ModelImporter:
       name: Take 001
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 15.600001
+      lastFrame: 48
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
