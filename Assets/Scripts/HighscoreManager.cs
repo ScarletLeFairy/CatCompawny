@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class HighscoreManager : MonoBehaviour {
 
+
     private class ScoreEntry
     {
         public string name;
@@ -18,7 +19,6 @@ public class HighscoreManager : MonoBehaviour {
         }
     }
 
-    
     private int scoreCount = 3;
 
     public Text highscoreText;
@@ -30,11 +30,8 @@ public class HighscoreManager : MonoBehaviour {
 
     private void Awake()
     {
-        PlayerPrefs.DeleteAll();
-        //highscoreText.enabled = true;
-        //SaveToPlayerPrefsTest(); // TODO
+        //PlayerPrefs.DeleteAll(); // do to clear all Entries
         LoadFromPlayerPrefs();
-        currentScore = 170; // TODO
         RefreshScoreboard();
     }
 
@@ -99,24 +96,14 @@ public class HighscoreManager : MonoBehaviour {
             
     }
 
-
-    //// Use this for initialization
-    //void Start () {
-    //    CheckToSaveScore(currentScore);
-    //}
-
     public void CheckToSaveScore(int score)
     {
         if (score > 0)
         {
             currentScore = score;
-            Debug.Log("Score bigger 0");
-            //for (int i = 0; i < scores.Count; i++)
-            //{
-            //    Debug.Log(i + " " + scores[i].name + " " + scores[i].score);
-            //}
+            //Debug.Log("Score bigger 0");
 
-                if (scores.Count < 3 || score > scores[2].score)
+            if (scores.Count < 3 || score > scores[2].score)
             {
                 inputField.gameObject.SetActive(true);
                 inputField.enabled = true;
@@ -129,28 +116,16 @@ public class HighscoreManager : MonoBehaviour {
         }
     }
 
- //   // Update is called once per frame
- //   void Update () {
-		
-	//}
-
     public void HandleNameInput()
     {
-        //Debug.Log("Input has ended "+ inputField.text);
+        //Debug.Log("Name input is "+ inputField.text);
         string name = inputField.text;
-        //inputField.CancelInvoke();
-        //inputField.DeactivateInputField();
-        //inputField.enabled = false;
-
         if (!string.IsNullOrEmpty(name))
         {
-            //Debug.Log("Is null:" + string.IsNullOrEmpty(name));
             SaveToScoreboard(currentScore, name);
-            RefreshScoreboard();
-            
+            RefreshScoreboard();            
         }
     }
-
 
     private void SaveToScoreboard(int score, string name)
     {
@@ -180,12 +155,6 @@ public class HighscoreManager : MonoBehaviour {
             {
                 scores.RemoveAt(scoreCount);
             }
-        }
-
-        
-        for (int i = 0; i < scores.Count; i++)
-        {
-            Debug.Log(scores[i].name + ": " + scores[i].score);
         }
         SaveToPlayerPrefs();
     }
