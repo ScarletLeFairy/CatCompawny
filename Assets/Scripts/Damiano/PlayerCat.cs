@@ -53,36 +53,40 @@ public class PlayerCat : MonoBehaviour {
 
 
     // Use this for initialization
-    void Awake() {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    AudioSource audioSource;
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    // Update is called once per frame
+    void Update () {
         
         RotateView();
 
         MoveCharacter();
 
-        if (Input.GetKeyDown(KeyCode.JoystickButton2))
-        {
-            Attack();
-        }
+        Attack();
+        
+    }
 
+
+    void Attack()
+    {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
             node.SetActive(true);
         }
         else
         {
+            if (Input.GetKeyDown(KeyCode.JoystickButton2))
+            {
+                anim.SetTrigger("Attack");
+                audioSource.Play();
+            }
             node.SetActive(false);
         }
-    }
-
-
-    void Attack()
-    {
-        anim.SetTrigger("Attack");
     }
 
     
