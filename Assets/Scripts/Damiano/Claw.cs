@@ -19,8 +19,14 @@ public class Claw : MonoBehaviour {
             rigid.AddForce(dir * 3, ForceMode.Impulse);
             rigid.AddForce(Vector3.up * 1.5f, ForceMode.Impulse);
 
-           
+            AlarmClock alarm = rigid.gameObject.GetComponent<AlarmClock>();
+            if (alarm != null)
+            {
+                alarm.Snooze();
+            }
         }
+
+
 
         Destructible dest = rigid != null ? rigid.gameObject.GetComponent<Destructible>() : FindDestructible(other.transform);
         if (dest != null)

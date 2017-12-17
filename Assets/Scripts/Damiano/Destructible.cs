@@ -33,11 +33,15 @@ public class Destructible : MonoBehaviour {
 
     public void SufferDamage()
     {
+        
         SufferDamage(claw_damage);
     }
 
     protected void SufferDamage(int damage)
     {
+
+        //Debug.Log(gameObject.name);
+
         if (damage == 0 || health == 0)
             return;
 
@@ -57,9 +61,7 @@ public class Destructible : MonoBehaviour {
         GameObject dmg = Instantiate(UI_Damage, transform.position, Quaternion.identity);
         dmg.GetComponent<UI_Damage>().damage = points;
         gameManager.AddPoints(points);
-
         
-
        
     }
     

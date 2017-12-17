@@ -145,6 +145,20 @@ public class PlayerCat : MonoBehaviour {
 
         if (body.isGrounded)
         {
+            
+
+
+            velocity.x = movedir.x;
+            velocity.z = movedir.z;
+
+            velocity *= movspeed * Time.deltaTime;
+
+            if (Input.GetKeyDown(KeyCode.JoystickButton0) && jump) {
+                velocity.y = jump_height * Time.deltaTime;
+                anim.SetTrigger("Jump");
+                jump = false;
+            }
+
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("JumpMiddle"))
             {
                 anim.SetTrigger("Landing");
@@ -155,19 +169,6 @@ public class PlayerCat : MonoBehaviour {
                 jump = true;
             }
 
-
-            velocity.x = movedir.x;
-            velocity.z = movedir.z;
-
-            velocity *= movspeed * Time.deltaTime;
-
-
-            if (Input.GetKeyDown(KeyCode.JoystickButton0) && jump) {
-                velocity.y = jump_height * Time.deltaTime;
-                anim.SetTrigger("Jump");
-                jump = false;
-            }
-            
         }
 
         

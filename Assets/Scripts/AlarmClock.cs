@@ -7,8 +7,7 @@ public class AlarmClock : MonoBehaviour {
 
     private Vector3 timerPos;
     public Text timerText;
-
-    public int startTime = 20;
+    
     private bool stop = true;
 
     private float timeLeft = 0;
@@ -20,7 +19,7 @@ public class AlarmClock : MonoBehaviour {
 
     public Vector3 TimerPosOffset;
 
-    public int[] snoozeTime = { 25, 20, 15, 10, 5 };
+    int[] snoozeTime = { 60, 50, 40, 30, 20 };
     private int snoozeIndex = 0;
 
     private Transform parentTransform;
@@ -42,8 +41,8 @@ public class AlarmClock : MonoBehaviour {
     public void StartTimer()
     {
         stop = false;
-        timeLeft = startTime;
-        snoozeIndex = 0;
+        timeLeft = snoozeTime[0];
+        snoozeIndex = 1;
         Update();
         StartCoroutine(UpdateAlarmClock());
         Debug.Log("Timer is started");
@@ -99,20 +98,20 @@ public class AlarmClock : MonoBehaviour {
     /**
      * Snooze only works if there is a Snooze time left in the array (not endless)
      **/
-    private void Snooze()
+    public void Snooze()
     {
-        if (/*timeLeft <= 5 &&*/ snoozeIndex < snoozeTime.Length)
+        if (snoozeIndex < snoozeTime.Length && timeLeft < snoozeTime[snoozeIndex + 1])
         {
             Debug.Log("Snooze " + (snoozeIndex + 1));
             timeLeft = snoozeTime[snoozeIndex++];
         } 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent(typeof(PlayerCat))) {
             Snooze();
         }
-    }
+    }*/
 
 }
