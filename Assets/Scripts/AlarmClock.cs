@@ -23,9 +23,12 @@ public class AlarmClock : MonoBehaviour {
     public int[] snoozeTime = { 25, 20, 15, 10, 5 };
     private int snoozeIndex = 0;
 
+    private Transform parentTransform;
+
     private void Awake()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        parentTransform = timerText.gameObject.GetComponentInParent<Transform>();
     }
 
 
@@ -51,8 +54,7 @@ public class AlarmClock : MonoBehaviour {
         timerPos = gameObject.transform.position;
         timerPos += TimerPosOffset;
         timerText.transform.position = timerPos;
-        
-        timerText.transform.LookAt(cam.transform, transform.up);
+        timerText.transform.LookAt(cam.transform, Vector3.up);
         timerText.transform.Rotate(new Vector3(0, 180, 0));
 
         // just for testing
