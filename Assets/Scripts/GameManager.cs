@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
     public Text startText;
     public InputField inputField;
 
+    public AlarmClock alarmClock;
+
     private void Awake()
     {
         gameTitle.enabled = true;
@@ -23,7 +25,7 @@ public class GameManager : MonoBehaviour {
         pointsText.enabled = false;
         pointsCount.enabled = false;
         highscoreTitle.enabled = false;
-        highscoreText.enabled = true;
+        highscoreText.enabled = false;
 
         // TODO get alarm clock and timer or use event
     }
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour {
         pointsCount.enabled = true;
 
         gameRunning = true;
+
+        alarmClock.StartTimer();
     }
 
     public void EndGame()
@@ -63,11 +67,15 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyDown(KeyCode.JoystickButton2))
+        if (!gameRunning)
         {
-            Debug.Log("Start the game");
-            StartGame();
+            if (Input.GetKeyDown(KeyCode.JoystickButton2))
+            {
+                Debug.Log("Start the game");
+                StartGame();
+            }
         }
+        
     }
 
     

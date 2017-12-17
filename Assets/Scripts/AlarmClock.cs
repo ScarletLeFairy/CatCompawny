@@ -34,14 +34,10 @@ public class AlarmClock : MonoBehaviour {
         timerPos = gameObject.transform.position;
         timerPos += TimerPosOffset;
         cam = Camera.main;
-        
-        // start timer with game
-        StartTimer();
     }
 
     public void StartTimer()
     {
-        // TODO: do this on pressing start later
         stop = false;
         timeLeft = startTime;
         snoozeIndex = 0;
