@@ -5,15 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource)), SelectionBase]
 public class Present : Destructible {
 
-    public AudioClip clip;
-    AudioSource audioSource;
+    /*AudioSource audioSource;
 
     public float stability = 2f;
 
     // Use this for initialization
     void Awake() {
         audioSource = GetComponent<AudioSource>();
-        audioSource.clip = clip;
     }
 	
 	// Update is called once per frame
@@ -31,5 +29,5 @@ public class Present : Destructible {
             SufferDamage(Mathf.RoundToInt(collision.relativeVelocity.magnitude) * points);
             audioSource.Play();
         }
-    }
+    }*/
 }

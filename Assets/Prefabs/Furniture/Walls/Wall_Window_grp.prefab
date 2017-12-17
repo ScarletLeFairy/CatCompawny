@@ -119,8 +119,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4129357245766190}
-  - component: {fileID: 65621165313411968}
-  - component: {fileID: 54346680705028012}
+  - component: {fileID: 65886887788580370}
   m_Layer: 0
   m_Name: Wall_Window_grp
   m_TagString: Untagged
@@ -148,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1944093261208934}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8550212, y: 0.015605468, z: -5.422958}
+  m_LocalPosition: {x: -4.105021, y: 0.015605468, z: 11.043862}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4836319669198114}
@@ -177,7 +176,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1398978072470534}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.19303103, y: 153.44632, z: 4.988729}
+  m_LocalPosition: {x: 124.806946, y: 153.44632, z: 5.6915603}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4346910397810172}
@@ -193,7 +192,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719687252494610}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.000047683716, y: 125, z: -4.516251}
+  m_LocalPosition: {x: 124.99993, y: 125, z: -3.81342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4129357245766190}
@@ -206,7 +205,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1689436087745616}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.7012346, y: 135.7178, z: -4.907908}
+  m_LocalPosition: {x: 127.70121, y: 135.7178, z: -4.2050767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4129357245766190}
@@ -403,51 +402,36 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1407238577310356}
-  m_Mesh: {fileID: 4300062, guid: 2f7dc3caa9b635148950cfd3d2a81d86, type: 3}
+  m_Mesh: {fileID: 4300016, guid: dfd8712177dc9dc41864172b904f70ea, type: 3}
 --- !u!33 &33139376545767022
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1069449522805512}
-  m_Mesh: {fileID: 4300064, guid: 2f7dc3caa9b635148950cfd3d2a81d86, type: 3}
+  m_Mesh: {fileID: 4300018, guid: dfd8712177dc9dc41864172b904f70ea, type: 3}
 --- !u!33 &33529353312770806
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1892209609769994}
-  m_Mesh: {fileID: 4300060, guid: 2f7dc3caa9b635148950cfd3d2a81d86, type: 3}
+  m_Mesh: {fileID: 4300014, guid: dfd8712177dc9dc41864172b904f70ea, type: 3}
 --- !u!33 &33853923178130510
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719687252494610}
-  m_Mesh: {fileID: 4300066, guid: 2f7dc3caa9b635148950cfd3d2a81d86, type: 3}
+  m_Mesh: {fileID: 4300020, guid: dfd8712177dc9dc41864172b904f70ea, type: 3}
 --- !u!33 &33973763596891028
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1689436087745616}
-  m_Mesh: {fileID: 4300058, guid: 2f7dc3caa9b635148950cfd3d2a81d86, type: 3}
---- !u!54 &54346680705028012
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1944093261208934}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &65621165313411968
+  m_Mesh: {fileID: 4300012, guid: dfd8712177dc9dc41864172b904f70ea, type: 3}
+--- !u!65 &65886887788580370
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -457,5 +441,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 250, y: 288.6787, z: 8.68}
-  m_Center: {x: 0, y: 144.33936, z: -4.6}
+  m_Size: {x: 250, y: 288.67868, z: 50.47248}
+  m_Center: {x: 125, y: 144.33934, z: -24.474106}

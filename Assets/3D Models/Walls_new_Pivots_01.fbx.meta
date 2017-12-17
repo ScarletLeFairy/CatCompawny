@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: dfd8712177dc9dc41864172b904f70ea
+timeCreated: 1513464510
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Curtain_01_geo
+    100002: Curtain_02_geo
+    100004: Curtain_cylinder_geo
+    100006: Curtain_grp
+    100008: Door_Frame_geo
+    100010: Door_geo
+    100012: Door_grp
+    100014: Handle_geo
+    100016: Handle_geo1
+    100018: Wall_Door_grp
+    100020: Wall_Door_static_grp
+    100022: Wall_geo
+    100024: Wall_simple_geo
+    100026: Wall_Window_geo
+    100028: Wall_Window_grp
+    100030: //RootNode
+    100032: Window_cross_geo
+    400000: Curtain_01_geo
+    400002: Curtain_02_geo
+    400004: Curtain_cylinder_geo
+    400006: Curtain_grp
+    400008: Door_Frame_geo
+    400010: Door_geo
+    400012: Door_grp
+    400014: Handle_geo
+    400016: Handle_geo1
+    400018: Wall_Door_grp
+    400020: Wall_Door_static_grp
+    400022: Wall_geo
+    400024: Wall_simple_geo
+    400026: Wall_Window_geo
+    400028: Wall_Window_grp
+    400030: //RootNode
+    400032: Window_cross_geo
+    2300000: Curtain_01_geo
+    2300002: Curtain_02_geo
+    2300004: Curtain_cylinder_geo
+    2300006: Door_Frame_geo
+    2300008: Door_geo
+    2300010: Handle_geo
+    2300012: Handle_geo1
+    2300014: Wall_geo
+    2300016: Wall_simple_geo
+    2300018: Wall_Window_geo
+    2300020: Window_cross_geo
+    3300000: Curtain_01_geo
+    3300002: Curtain_02_geo
+    3300004: Curtain_cylinder_geo
+    3300006: Door_Frame_geo
+    3300008: Door_geo
+    3300010: Handle_geo
+    3300012: Handle_geo1
+    3300014: Wall_geo
+    3300016: Wall_simple_geo
+    3300018: Wall_Window_geo
+    3300020: Window_cross_geo
+    4300000: Door_geo
+    4300002: Handle_geo
+    4300004: Handle_geo1
+    4300006: Wall_geo
+    4300008: Door_Frame_geo
+    4300010: Wall_simple_geo
+    4300012: Window_cross_geo
+    4300014: Curtain_cylinder_geo
+    4300016: Curtain_01_geo
+    4300018: Curtain_02_geo
+    4300020: Wall_Window_geo
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fabric_curtain_mat1
+    second: {fileID: 2100000, guid: 56f4b92f6f1b47e489168e24154e53ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal_mat
+    second: {fileID: 2100000, guid: 63a7057966746274eb50d130546c0250, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall_mat
+    second: {fileID: 2100000, guid: 07bf957514633ca4396155d1c0f23cdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood
+    second: {fileID: 2100000, guid: 3afd12eb269acf246abe3e94188d21b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wood_walls
+    second: {fileID: 2100000, guid: 52fd8212a5b695741bc9c9723a0e352e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
