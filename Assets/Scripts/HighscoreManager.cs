@@ -30,11 +30,12 @@ public class HighscoreManager : MonoBehaviour {
 
     private void Awake()
     {
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         //highscoreText.enabled = true;
         //SaveToPlayerPrefsTest(); // TODO
         LoadFromPlayerPrefs();
         currentScore = 170; // TODO
+        RefreshScoreboard();
     }
 
     private void LoadFromPlayerPrefs()
@@ -110,11 +111,20 @@ public class HighscoreManager : MonoBehaviour {
         {
             currentScore = score;
             Debug.Log("Score bigger 0");
-            if (scores.Count < 3 || score > scores[2].score)
+            //for (int i = 0; i < scores.Count; i++)
+            //{
+            //    Debug.Log(i + " " + scores[i].name + " " + scores[i].score);
+            //}
+
+                if (scores.Count < 3 || score > scores[2].score)
             {
+                inputField.gameObject.SetActive(true);
                 inputField.enabled = true;
                 inputField.ActivateInputField();
                 Debug.Log("Score valid");
+            } else
+            {
+                RefreshScoreboard();
             }
         }
     }
@@ -185,7 +195,7 @@ public class HighscoreManager : MonoBehaviour {
         string text = "";
         for (int i = 0; i < scores.Count; i++)
         {
-            text = text + (i + 1) + ".  " + scores[i].name + "    " + scores[i].score + "\n";
+            text = text + (i + 1) + ".  " + scores[i].name + "\t" + scores[i].score + "\n";
         }
         highscoreText.text = text;
     }

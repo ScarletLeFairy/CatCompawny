@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour {
         pointsCount.enabled = false;
         highscoreTitle.enabled = false;
         highscoreText.enabled = false;
+        inputField.gameObject.SetActive(false); 
 
         highscoreManager = GetComponent<HighscoreManager>();
 
@@ -69,11 +70,11 @@ public class GameManager : MonoBehaviour {
         highscoreManager.CheckToSaveScore(170); // TODO get score
     }
 
-    // Use this for initialization
-    void Start () {
+    //// Use this for initialization
+    //void Start () {
 
         
-    }
+    //}
 
     // Update is called once per frame
     void Update () {

@@ -76,7 +76,7 @@ public class AlarmClock : MonoBehaviour {
                 minutes = 0;
                 seconds = 0;
             }
-        } else {
+        } else if (stop && gameManager.GameIsRunning) {
             gameManager.EndGame();
         }
     }
