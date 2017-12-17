@@ -208,6 +208,6 @@ MonoBehaviour:
   health: 20
   points: 3
   claw_damage: 10
-  stability: 3
+  stability: 6
   destructable: 1
   UI_Damage: {fileID: 1124246380481538, guid: 169610dbc1081ea4298caa5df1270f0c, type: 2}

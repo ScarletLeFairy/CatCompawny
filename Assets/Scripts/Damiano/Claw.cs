@@ -16,14 +16,16 @@ public class Claw : MonoBehaviour {
         Rigidbody rigid = FindRigidbody(other.transform);
         if (rigid != null)
         {
-            rigid.AddForce(dir * 5, ForceMode.Impulse);
-            rigid.AddForce(Vector3.up * 2, ForceMode.Impulse);
+            rigid.AddForce(dir * 3, ForceMode.Impulse);
+            rigid.AddForce(Vector3.up * 1.5f, ForceMode.Impulse);
 
-            Destructible dest = rigid.gameObject.GetComponent<Destructible>();
-            if (dest != null)
-            {
-                dest.SufferDamage();
-            }
+           
+        }
+
+        Destructible dest = rigid != null ? rigid.gameObject.GetComponent<Destructible>() : FindDestructible(other.transform);
+        if (dest != null)
+        {
+            dest.SufferDamage();
         }
     }
 
@@ -38,6 +40,22 @@ public class Claw : MonoBehaviour {
             return FindRigidbody(trans.parent);
         }
         
+
+        return null;
+    }
+
+    Destructible FindDestructible(Transform trans)
+    {
+        if (trans.GetComponent<Destructible>())
+        {
+            return trans.GetComponent<Destructible>();
+        }
+
+        if (trans.parent != null)
+        {
+            return FindDestructible(trans.parent);
+        }
+
 
         return null;
     }

@@ -36,9 +36,28 @@ public class Destructible : MonoBehaviour {
 
     protected void SufferDamage(int damage)
     {
+        if (damage == 0 || health == 0)
+            return;
+
+        int points = 0;
+
+        if (damage > health)
+        {
+            points = health;
+            health = 0;
+        }
+        else
+        {
+            health -= damage;
+            points = damage;
+        }
+
         GameObject dmg = Instantiate(UI_Damage, transform.position, Quaternion.identity);
-        dmg.GetComponent<UI_Damage>().damage = damage;
-        health -= damage;
+        dmg.GetComponent<UI_Damage>().damage = points;
+
+        
+
+       
     }
     
     
