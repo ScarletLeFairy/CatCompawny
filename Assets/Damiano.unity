@@ -17784,7 +17784,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b15957b33f8344846bdcad6e297e06d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26938,15 +26938,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4909650599342210, guid: 0c18932074f2b6e469531c40647aeb96, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.008
+      value: 5.708
       objectReference: {fileID: 0}
     - target: {fileID: 4909650599342210, guid: 0c18932074f2b6e469531c40647aeb96, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.611
+      value: 4.771
       objectReference: {fileID: 0}
     - target: {fileID: 4909650599342210, guid: 0c18932074f2b6e469531c40647aeb96, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.114
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4909650599342210, guid: 0c18932074f2b6e469531c40647aeb96, type: 2}
       propertyPath: m_LocalRotation.x
@@ -26977,6 +26977,11 @@ Prefab:
         type: 2}
       propertyPath: m_Height
       value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132887301281742, guid: 0c18932074f2b6e469531c40647aeb96,
+        type: 2}
+      propertyPath: jump_height
+      value: 0.22
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c18932074f2b6e469531c40647aeb96, type: 2}
@@ -29346,7 +29351,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ae5e20e8ef3156f40a86b7232409ca66, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

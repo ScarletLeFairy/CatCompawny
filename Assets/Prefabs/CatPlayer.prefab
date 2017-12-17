@@ -986,7 +986,7 @@ MonoBehaviour:
   distance: 0.8
   spring: {x: 0, y: 0.4, z: 0}
   movspeed: 2
-  jump: 10
+  jump: 30
   gravity: 1
 --- !u!114 &114168950197380860
 MonoBehaviour:

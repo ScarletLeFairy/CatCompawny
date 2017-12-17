@@ -14,7 +14,7 @@ public class PlayerCat : MonoBehaviour {
     public Vector3 spring = Vector3.zero;
 
     public float movspeed = 10;
-    public float jump = 40;
+    public float jump_height = 15;
     public float gravity = 9.81f / 2f;
 
     Vector3 velocity = Vector3.zero;
@@ -81,6 +81,8 @@ public class PlayerCat : MonoBehaviour {
     }
 
     bool freeze = false;
+    bool attack = true;
+
     void Attack()
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
@@ -102,8 +104,8 @@ public class PlayerCat : MonoBehaviour {
         }
     }
 
-    
 
+    bool jump = true;
     void MoveCharacter()
     {
         if (freeze)
@@ -143,14 +145,27 @@ public class PlayerCat : MonoBehaviour {
 
         if (body.isGrounded)
         {
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("JumpMiddle"))
+            {
+                anim.SetTrigger("Landing");
+            }
+
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("JumpStart"))
+            {
+                jump = true;
+            }
+
+
             velocity.x = movedir.x;
             velocity.z = movedir.z;
 
             velocity *= movspeed * Time.deltaTime;
 
 
-            if (Input.GetKeyDown(KeyCode.JoystickButton0)) {
-                velocity.y = jump * Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.JoystickButton0) && jump) {
+                velocity.y = jump_height;// * Time.deltaTime;
+                anim.SetTrigger("Jump");
+                jump = false;
             }
             
         }
