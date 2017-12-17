@@ -30,9 +30,9 @@ public class HighscoreManager : MonoBehaviour {
 
     private void Awake()
     {
-        PlayerPrefs.DeleteAll();
-        highscoreText.enabled = true;
-        SaveToPlayerPrefsTest(); // TODO
+        //PlayerPrefs.DeleteAll();
+        //highscoreText.enabled = true;
+        //SaveToPlayerPrefsTest(); // TODO
         LoadFromPlayerPrefs();
         currentScore = 170; // TODO
     }
@@ -99,15 +99,16 @@ public class HighscoreManager : MonoBehaviour {
     }
 
 
-    // Use this for initialization
-    void Start () {
-        CheckToSaveScore(currentScore);
-    }
+    //// Use this for initialization
+    //void Start () {
+    //    CheckToSaveScore(currentScore);
+    //}
 
-    private void CheckToSaveScore(int score)
+    public void CheckToSaveScore(int score)
     {
         if (score > 0)
         {
+            currentScore = score;
             Debug.Log("Score bigger 0");
             if (scores.Count < 3 || score > scores[2].score)
             {
@@ -118,10 +119,10 @@ public class HighscoreManager : MonoBehaviour {
         }
     }
 
-    // Update is called once per frame
-    void Update () {
+ //   // Update is called once per frame
+ //   void Update () {
 		
-	}
+	//}
 
     public void HandleNameInput()
     {

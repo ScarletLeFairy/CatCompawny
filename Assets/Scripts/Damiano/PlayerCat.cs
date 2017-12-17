@@ -50,32 +50,35 @@ public class PlayerCat : MonoBehaviour {
         }
     }
 
-
+    private GameManager gameManager;
 
     // Use this for initialization
     void Awake() {
-		
-	}
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        
-        RotateView();
 
-        MoveCharacter();
+        if (gameManager.GameIsRunning)
+        {
+            RotateView();
 
-        if (Input.GetKeyDown(KeyCode.JoystickButton2))
-        {
-            Attack();
-        }
+            MoveCharacter();
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
-        {
-            node.SetActive(true);
-        }
-        else
-        {
-            node.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.JoystickButton2))
+            {
+                Attack();
+            }
+
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            {
+                node.SetActive(true);
+            }
+            else
+            {
+                node.SetActive(false);
+            }
         }
     }
 

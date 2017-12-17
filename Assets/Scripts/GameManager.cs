@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
-    private bool gameRunning = false;
+    private bool gameIsRunning = false;
+    public bool GameIsRunning 
+    {
+        get { return gameIsRunning; }
+    }
 
     public Text gameTitle;
     public Text highscoreTitle;
@@ -17,6 +21,8 @@ public class GameManager : MonoBehaviour {
 
     public AlarmClock alarmClock;
 
+    private HighscoreManager highscoreManager;
+
     private void Awake()
     {
         gameTitle.enabled = true;
@@ -26,6 +32,8 @@ public class GameManager : MonoBehaviour {
         pointsCount.enabled = false;
         highscoreTitle.enabled = false;
         highscoreText.enabled = false;
+
+        highscoreManager = GetComponent<HighscoreManager>();
 
         // TODO get alarm clock and timer or use event
     }
@@ -41,7 +49,7 @@ public class GameManager : MonoBehaviour {
         pointsText.enabled = true;
         pointsCount.enabled = true;
 
-        gameRunning = true;
+        gameIsRunning = true;
 
         alarmClock.StartTimer();
     }
@@ -56,7 +64,9 @@ public class GameManager : MonoBehaviour {
         pointsText.enabled = false;
         pointsCount.enabled = false;
 
-        gameRunning = false;
+        gameIsRunning = false;
+
+        highscoreManager.CheckToSaveScore(170); // TODO get score
     }
 
     // Use this for initialization
@@ -67,7 +77,7 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (!gameRunning)
+        if (!gameIsRunning)
         {
             if (Input.GetKeyDown(KeyCode.JoystickButton2))
             {
