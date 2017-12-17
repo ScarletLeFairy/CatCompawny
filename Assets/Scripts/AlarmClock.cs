@@ -96,7 +96,7 @@ public class AlarmClock : MonoBehaviour {
      **/
     private void Snooze()
     {
-        if (timeLeft <= 5 && snoozeIndex < snoozeTime.Length)
+        if (/*timeLeft <= 5 &&*/ snoozeIndex < snoozeTime.Length)
         {
             Debug.Log("Snooze " + (snoozeIndex + 1));
             timeLeft = snoozeTime[snoozeIndex++];
